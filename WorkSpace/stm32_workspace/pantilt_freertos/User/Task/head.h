@@ -1,6 +1,6 @@
 #ifndef HEAD
 #define HEAD
-#include "main.h"
+//#include "main.h"
 #include "usart.h"
 #include "gpio.h"
 #include "FreeRTOS.h"
@@ -20,6 +20,7 @@ extern uint8_t mode1;
 extern uint8_t mode2;
 extern int16_t spe1;
 extern int16_t spe2;
+extern uint8_t ERROR_FLAG;
 
 #ifdef RED
 extern uint8_t dot1x,dot1y,dot2x,dot2y,dot3x,dot3y,dot4x,dot4y;

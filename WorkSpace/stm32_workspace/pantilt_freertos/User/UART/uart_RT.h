@@ -5,7 +5,7 @@
 #include "usart.h"
 
 
-extern uint8_t ReceivebufferG[8];
+extern uint8_t ReceivebufferG[6];
 extern uint8_t ReceivebufferR[14];
 void U_Transmit(uint8_t num);
 

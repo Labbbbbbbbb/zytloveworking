@@ -1,3 +1,13 @@
+/*
+ * @Author: ZYT
+ * @Date: 2025-05-12 23:00:46
+ * @LastEditors: ZYT
+ * @LastEditTime: 2025-05-15 01:04:08
+ * @FilePath: \pantilt_freertos\User\UART\uart_RT.c
+ * @Brief: 
+ * 
+ * Copyright (c) 2025 by zyt, All Rights Reserved. 
+ */
 #include "uart_RT.h"
 #include "head.h"
 void Decode_Greenligit(uint8_t* Receivebuffer);
@@ -9,9 +19,10 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
     {
         #ifdef GREEN
         Decode_Greenligit(ReceivebufferG);
+        HAL_UART_Receive_IT(&huart2,ReceivebufferG,sizeof(ReceivebufferG));
         #endif
         #ifdef RED
-        Decode_Greenligit(ReceivebufferR);
+        Decode_Redligit(ReceivebufferR);
         #endif
     }
 }
@@ -30,14 +41,26 @@ void U_Transmit(uint8_t num)
 
 void Decode_Greenligit(uint8_t* Receivebuffer)
 {
-    if(Receivebuffer[0]==0xAA&&Receivebuffer[1]==0xFF&&Receivebuffer[6]==0xFF&&Receivebuffer[7]==0xAA)
+    if(Receivebuffer[0]==0xAA&&Receivebuffer[1]==0xFF&&Receivebuffer[4]==0xFF&&Receivebuffer[5]==0xAA)
         {
             int16_t spe1_tmp=0;
             int16_t spe2_tmp=0;
-            spe1_tmp = (Receivebuffer[2] << 8) | Receivebuffer[3];  // 16-bit 组合
-            spe2_tmp = (Receivebuffer[4] << 8) | Receivebuffer[5];      //高位在前低位在后，大端模式
-            spe1=spe1_tmp;
-            spe2=spe2_tmp;
+            //spe1_tmp = (Receivebuffer[2] << 8) | Receivebuffer[3];  // 16-bit 组合
+           // spe2_tmp = (Receivebuffer[4] << 8) | Receivebuffer[5];      //高位在前低位在后，大端模式
+           spe1_tmp = Receivebuffer[2];
+           spe2_tmp = Receivebuffer[3];
+           if(spe1_tmp>128)
+           {
+            spe1 =-(spe1_tmp-256)*10;
+           }else{
+            spe1=-spe1_tmp*10;
+           }
+           if(spe2_tmp>128){
+           spe2 = (spe2_tmp-256)*6;
+           }else{
+            spe2=spe2_tmp*6;
+           }
+
         }
         HAL_UART_Receive_IT(&huart2,Receivebuffer,sizeof(Receivebuffer));
 }

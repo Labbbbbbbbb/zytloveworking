@@ -1,1 +1,9 @@
-{}
+
+{
+  "C_Cpp.default.compilerPath": "/path/to/arm-none-eabi-gcc",
+  "C_Cpp.default.intelliSenseMode": "gcc-arm",
+  "C_Cpp.default.includePath": [
+    "${workspaceFolder}/Core/Inc",
+    "${workspaceFolder}/Drivers/STM32F4xx_HAL_Driver/Inc"
+  ]
+}

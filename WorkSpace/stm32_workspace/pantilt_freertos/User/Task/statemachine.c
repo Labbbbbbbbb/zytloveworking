@@ -12,21 +12,21 @@ void Statemachine_Task(void *argument)
         else if (Q_NO==2)
         {
             /* 仍然使用位置模式 */
-            uint8_t square_size=200;        //待确认各个点是哪个位置
-            tar_pos1=2048-square_size;
-            tar_pos2=2223-square_size;
+            uint16_t square_size=139;        //待确认各个点是哪个位置
+            tar_pos1=2048-square_size-10;
+            tar_pos2=2223+150;
             osDelay(3000);
             tar_pos1=2048+square_size;
-            tar_pos2=2223-square_size;
+            tar_pos2=2223+150;
             osDelay(3000);
             tar_pos1=2048+square_size;
-            tar_pos2=2223+square_size;
+            tar_pos2=2223-28;
             osDelay(3000);
-            tar_pos1=2048-square_size;
-            tar_pos2=2223+square_size;
+            tar_pos1=2048-square_size-10;
+            tar_pos2=2223-28;
             osDelay(3000);
-            tar_pos1=2048-square_size;
-            tar_pos2=2223-square_size;
+            tar_pos1=2048-square_size-10;
+            tar_pos2=2223+150;
             osDelay(3000);
         }
         else if (Q_NO>=3)       //实际上3和4一起算了
@@ -108,7 +108,7 @@ void Statemachine_Start(void)
     osThreadId_t StatemachineHandle;
     const osThreadAttr_t Statemachine_attributes = {
         .name       = "Statemachine",
-        .stack_size = 128 * 10,
+        .stack_size = 128 *3,
         .priority   = (osPriority_t)osPriorityNormal,
     };
     StatemachineHandle = osThreadNew(Statemachine_Task, NULL, &Statemachine_attributes);

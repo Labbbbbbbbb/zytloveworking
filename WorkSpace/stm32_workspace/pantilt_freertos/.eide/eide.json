@@ -30,7 +30,7 @@
       "compileConfig": {
         "cpuType": "Cortex-M3",
         "floatingPointHardware": "none",
-        "scatterFilePath": "STM32F103XX_FLASH.ld",
+        "scatterFilePath": "STM32F103C8TX_FLASH.ld",
         "useCustomScatterFile": true,
         "storageLayout": {
           "RAM": [],
