@@ -1,0 +1,32 @@
+
+build/
+dist/
+*.exe
+# Node.js
+node_modules/
+npm-debug.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Java
+*.class
+*.jar
+
+EIDC/TI_MCU_Resources/
+
+EIDC/Sample_Projects/pytorch/dataset/
+
+/机械
+/姿态解算&运动估计
+/EC_resources
+/WorkSpace/sw_workspace
+/MachineLearning
+/Motor
+/OpenCV
+/PCB
+/OpenMV
+/WorkSpace/stm32_workspace/wheel_odom
