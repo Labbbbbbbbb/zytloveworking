@@ -181,7 +181,11 @@ void SystemClock_Config(void)
 
 // void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 // {
+<<<<<<< HEAD
 // 	if(htim->Instance == TIM2)   //判断是哪个定时器触发的中�?????????
+=======
+// 	if(htim->Instance == TIM2)   //判断是哪个定时器触发的中�????????
+>>>>>>> origin/zyt1
 // 	{
 //     if(once==0)
 //     {
@@ -193,6 +197,7 @@ void SystemClock_Config(void)
 /* USER CODE END 4 */
 
 /**
+<<<<<<< HEAD
   * @brief  Period elapsed callback in non blocking mode
   * @note   This function is called  when TIM1 interrupt took place, inside
   * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
@@ -214,6 +219,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 }
 
 /**
+=======
+>>>>>>> origin/zyt1
   * @brief  This function is executed in case of error occurrence.
   * @retval None
   */

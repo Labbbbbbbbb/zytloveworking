@@ -44,7 +44,11 @@ Mcu.Pin1=PD1-OSC_OUT
 Mcu.Pin10=PA10
 Mcu.Pin11=PA13
 Mcu.Pin12=PA14
+<<<<<<< HEAD
 Mcu.Pin13=VP_SYS_VS_tim1
+=======
+Mcu.Pin13=VP_SYS_VS_Systick
+>>>>>>> origin/zyt1
 Mcu.Pin14=VP_TIM3_VS_ClockSourceINT
 Mcu.Pin15=VP_TIM4_VS_ClockSourceINT
 Mcu.Pin2=PA0-WKUP
@@ -72,9 +76,12 @@ NVIC.PendSV_IRQn=true\:0\:0\:false\:false\:true\:false\:false\:false
 NVIC.PriorityGroup=NVIC_PRIORITYGROUP_4
 NVIC.SVCall_IRQn=true\:0\:0\:false\:false\:true\:false\:false\:false
 NVIC.SysTick_IRQn=true\:15\:0\:false\:false\:true\:false\:true\:false
+<<<<<<< HEAD
 NVIC.TIM1_UP_IRQn=true\:15\:0\:false\:false\:true\:false\:true\:true
 NVIC.TimeBase=TIM1_UP_IRQn
 NVIC.TimeBaseIP=TIM1
+=======
+>>>>>>> origin/zyt1
 NVIC.UsageFault_IRQn=true\:0\:0\:false\:false\:true\:false\:false\:false
 PA0-WKUP.Signal=ADCx_IN0
 PA1.GPIOParameters=GPIO_PuPd,GPIO_Label
@@ -184,8 +191,13 @@ TIM4.Period=65535
 TIM4.Prescaler=71
 USART1.IPParameters=VirtualMode
 USART1.VirtualMode=VM_ASYNC
+<<<<<<< HEAD
 VP_SYS_VS_tim1.Mode=TIM1
 VP_SYS_VS_tim1.Signal=SYS_VS_tim1
+=======
+VP_SYS_VS_Systick.Mode=SysTick
+VP_SYS_VS_Systick.Signal=SYS_VS_Systick
+>>>>>>> origin/zyt1
 VP_TIM3_VS_ClockSourceINT.Mode=Internal
 VP_TIM3_VS_ClockSourceINT.Signal=TIM3_VS_ClockSourceINT
 VP_TIM4_VS_ClockSourceINT.Mode=Internal

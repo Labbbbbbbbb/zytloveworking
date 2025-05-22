@@ -56,8 +56,11 @@
 
 /* External variables --------------------------------------------------------*/
 extern DMA_HandleTypeDef hdma_adc1;
+<<<<<<< HEAD
 extern TIM_HandleTypeDef htim1;
 
+=======
+>>>>>>> origin/zyt1
 /* USER CODE BEGIN EV */
 
 /* USER CODE END EV */
@@ -187,7 +190,11 @@ void SysTick_Handler(void)
   /* USER CODE BEGIN SysTick_IRQn 0 */
 
   /* USER CODE END SysTick_IRQn 0 */
+<<<<<<< HEAD
 
+=======
+  HAL_IncTick();
+>>>>>>> origin/zyt1
   /* USER CODE BEGIN SysTick_IRQn 1 */
 
   /* USER CODE END SysTick_IRQn 1 */
@@ -214,6 +221,7 @@ void DMA1_Channel1_IRQHandler(void)
   /* USER CODE END DMA1_Channel1_IRQn 1 */
 }
 
+<<<<<<< HEAD
 /**
   * @brief This function handles TIM1 update interrupt.
   */
@@ -228,6 +236,8 @@ void TIM1_UP_IRQHandler(void)
   /* USER CODE END TIM1_UP_IRQn 1 */
 }
 
+=======
+>>>>>>> origin/zyt1
 /* USER CODE BEGIN 1 */
 
 /* USER CODE END 1 */

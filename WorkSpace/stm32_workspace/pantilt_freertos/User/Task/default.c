@@ -2,7 +2,11 @@
 
 #define DISTANCE 1000 //云台到白板的距离 单位mm
 #define PI 3.141592
+<<<<<<< HEAD
 #define ANGLE_MAXIMUM 800  //限定舵机能往一边转的角度（4095为一圈
+=======
+#define ANGLE_MAXIMUM 1000  //限定舵机能往一边转的角度（4095为一圈
+>>>>>>> origin/zyt1
 
 /*题号*/
 uint8_t Q_NO;
@@ -67,6 +71,7 @@ void StartDefaultTask(void *argument)
     
 
   /*判断角度是否在正常范围内*/  
+<<<<<<< HEAD
    if(ori_pos1>=ANGLE_MAXIMUM&&ori_pos1<=4095-ANGLE_MAXIMUM)
     {
       if(fdb_pos1>=ori_pos1+ANGLE_MAXIMUM||fdb_pos1<=ori_pos1-ANGLE_MAXIMUM)
@@ -96,6 +101,37 @@ void StartDefaultTask(void *argument)
 
       }
     }
+=======
+  //  if(ori_pos1>=ANGLE_MAXIMUM&&ori_pos1<=4095-ANGLE_MAXIMUM)
+  //   {
+  //     if(fdb_pos1>=ori_pos1+ANGLE_MAXIMUM+500||fdb_pos1<=ori_pos1-ANGLE_MAXIMUM-500)
+  //     {
+  //       spe1=0;
+  //       mode1=0;
+  //       WheelMode(1,mode1);
+  //       spe2=0;
+  //       mode2=0;
+  //       WheelMode(2,mode2);
+  //       ERROR_FLAG=1;
+  //     }
+  //   }
+
+  //   if(ori_pos2>=ANGLE_MAXIMUM&&ori_pos2<=4095-ANGLE_MAXIMUM)
+  //   {
+  //     //if(fdb_pos2<=3000&&fdb_pos2>=2000)
+  //     if(fdb_pos2>=ori_pos2+ANGLE_MAXIMUM-150||fdb_pos2<=ori_pos2-ANGLE_MAXIMUM+50)
+  //     {
+  //       spe2=0;
+  //       mode2=0;
+  //       WheelMode(2,mode2);
+  //       spe1=0;
+  //       mode1=0;
+  //       WheelMode(1,mode1);
+  //       ERROR_FLAG=1;
+
+  //     }
+  //   }
+>>>>>>> origin/zyt1
     /*判断角度是否在正常范围内*/ 
    
      printf("%d,%d,%d,%d,%d,%d,%d,%d\n",spe1,spe2,ori_pos1,ori_pos2,fdb_pos1,fdb_pos2,mode1,mode2);

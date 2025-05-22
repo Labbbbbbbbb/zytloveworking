@@ -30,7 +30,11 @@
       "compileConfig": {
         "cpuType": "Cortex-M3",
         "floatingPointHardware": "none",
+<<<<<<< HEAD
         "scatterFilePath": "STM32F103XX_FLASH.ld",
+=======
+        "scatterFilePath": "STM32F103C8TX_FLASH.ld",
+>>>>>>> origin/zyt1
         "useCustomScatterFile": true,
         "storageLayout": {
           "RAM": [],

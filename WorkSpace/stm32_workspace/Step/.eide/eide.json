@@ -5,8 +5,12 @@
   "srcDirs": [
     "Core",
     "Drivers",
+<<<<<<< HEAD
     "Step",
     "Middlewares"
+=======
+    "Step"
+>>>>>>> origin/zyt1
   ],
   "virtualFolder": {
     "name": "<virtual_root>",
@@ -65,11 +69,15 @@
       },
       "custom_dep": {
         "name": "default",
+<<<<<<< HEAD
         "incList": [
           "Middlewares/Third_Party/FreeRTOS/Source/include",
           "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2",
           "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3"
         ],
+=======
+        "incList": [],
+>>>>>>> origin/zyt1
         "libList": [],
         "defineList": [
           "USE_HAL_DRIVER",

@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+/*
+ * @Author: ZYT
+ * @Date: 2025-05-12 23:00:46
+ * @LastEditors: ZYT
+ * @LastEditTime: 2025-05-15 01:04:08
+ * @FilePath: \pantilt_freertos\User\UART\uart_RT.c
+ * @Brief: 
+ * 
+ * Copyright (c) 2025 by zyt, All Rights Reserved. 
+ */
+>>>>>>> origin/zyt1
 #include "uart_RT.h"
 #include "head.h"
 void Decode_Greenligit(uint8_t* Receivebuffer);
@@ -41,6 +54,7 @@ void Decode_Greenligit(uint8_t* Receivebuffer)
            spe2_tmp = Receivebuffer[3];
            if(spe1_tmp>128)
            {
+<<<<<<< HEAD
             spe1 =-(spe1_tmp-256);
            }else{
             spe1=-spe1_tmp;
@@ -49,6 +63,16 @@ void Decode_Greenligit(uint8_t* Receivebuffer)
            spe2 = (spe2_tmp-256);
            }else{
             spe2=spe2_tmp;
+=======
+            spe1 =-(spe1_tmp-256)*10;
+           }else{
+            spe1=-spe1_tmp*10;
+           }
+           if(spe2_tmp>128){
+           spe2 = (spe2_tmp-256)*6;
+           }else{
+            spe2=spe2_tmp*6;
+>>>>>>> origin/zyt1
            }
 
         }
